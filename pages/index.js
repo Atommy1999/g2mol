@@ -16,9 +16,9 @@ export default function Home() {
 
       <main className="main">
         <div className="container">
-          <h1 className="mb-1">2本鎖DNA (dsDNA) 換算ツール (g → mol) </h1>
+          <h1 className="mb-1">2本鎖DNA (dsDNA) モル数計算ツール (g→mol)</h1>
           <p className="text-gray-500">
-            Double-stranded DNA (dsDNA) Conversion Tool (g → mol)
+            Double-stranded DNA (dsDNA) Moles Calculator (g→mol)
           </p>
           <p className="text-sm mb-0.5">
             2本鎖DNA (dsDNA)

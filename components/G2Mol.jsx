@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const G2Mol = () => {
-  const [mass, setMass] = useState(0);
-  const [basePairCount, setBasePairCount] = useState(1);
+  const [mass, setMass] = useState("");
+  const [basePairCount, setBasePairCount] = useState("");
   const [molar, setMolar] = useState(0);
 
   const [massUnit, setMassUnit] = useState("ng");
@@ -10,8 +10,12 @@ const G2Mol = () => {
   const [molUnit, setMolUnit] = useState("pmol");
 
   useEffect(() => {
-    const moles = calculateMoles(mass, basePairCount);
-    setMolar(moles);
+    if (mass !== "" && basePairCount !== "") {
+      const moles = calculateMoles(mass, basePairCount);
+      setMolar(moles);
+    } else {
+      setMolar(0);
+    }
   }, [mass, basePairCount, massUnit, bpUnit, molUnit]);
 
   function calculateMoles(mass, basePairCount) {
@@ -73,7 +77,9 @@ const G2Mol = () => {
           <input
             type="number"
             value={mass}
-            onChange={(e) => setMass(Number(e.target.value))}
+            onChange={(e) =>
+              setMass(e.target.value === "" ? "" : Number(e.target.value))
+            }
             className="w-20 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
           />
           <select
@@ -91,7 +97,11 @@ const G2Mol = () => {
           <input
             type="number"
             value={basePairCount}
-            onChange={(e) => setBasePairCount(Number(e.target.value))}
+            onChange={(e) =>
+              setBasePairCount(
+                e.target.value === "" ? "" : Number(e.target.value)
+              )
+            }
             className="w-20 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
           />
           <select value={bpUnit} onChange={(e) => setBpUnit(e.target.value)}>

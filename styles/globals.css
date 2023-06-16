@@ -9,7 +9,7 @@ body {
 pre {
   position: relative;
   white-space: nowrap;
-  overflow: scroll-x;
+  overflow-x: scroll;
   line-height: 20px;
   word-break: break-word;
   margin: 0.5rem 0;

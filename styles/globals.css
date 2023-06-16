@@ -7,8 +7,16 @@ body {
   margin: 0;
 }
 pre {
+  position: relative;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: scroll-x;
+  line-height: 20px;
+  word-break: break-word;
+  margin: 0.5rem 0;
+  padding: 0.4rem 1rem;
+  background: rgb(40, 44, 52);
+  color: white;
+  border-radius: 10px;
 }
 
 * {

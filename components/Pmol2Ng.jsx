@@ -19,7 +19,7 @@ const DNAMolarCalculator = () => {
   }
 
   return (
-    <div className="flex flex-col space-y-3">
+    <div className="flex flex-col space-y-3 max-w-lg">
       <label className="flex flex-row justify-between items-center">
         <span>質量 (Mass) [ng]:</span>
         <input

@@ -9,22 +9,14 @@ const G2Mol = () => {
   const [bpUnit, setBpUnit] = useState("bp");
   const [molUnit, setMolUnit] = useState("pmol");
 
-  if (typeof window !== "undefined") {
+  useEffect(() => {
     const initialMassUnit = localStorage.getItem("massUnit") || "ng";
     const initialBpUnit = localStorage.getItem("bpUnit") || "bp";
     const initialMolUnit = localStorage.getItem("molUnit") || "pmol";
     setMassUnit(initialMassUnit);
     setBpUnit(initialBpUnit);
     setMolUnit(initialMolUnit);
-  }
-  // useEffect(() => {
-  //   const initialMassUnit = localStorage.getItem("massUnit") || "ng";
-  //   const initialBpUnit = localStorage.getItem("bpUnit") || "bp";
-  //   const initialMolUnit = localStorage.getItem("molUnit") || "pmol";
-  //   setMassUnit(initialMassUnit);
-  //   setBpUnit(initialBpUnit);
-  //   setMolUnit(initialMolUnit);
-  // }, []);
+  }, []);
 
   useEffect(() => {
     if (mass !== "" && basePairCount !== "") {

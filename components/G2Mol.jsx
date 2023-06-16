@@ -77,7 +77,6 @@ const G2Mol = () => {
             className="w-24 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
           />
           <select
-            className="w-16"
             value={massUnit}
             onChange={(e) => setMassUnit(e.target.value)}
           >
@@ -95,11 +94,7 @@ const G2Mol = () => {
             onChange={(e) => setBasePairCount(Number(e.target.value))}
             className="w-24 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
           />
-          <select
-            className="w-16"
-            value={bpUnit}
-            onChange={(e) => setBpUnit(e.target.value)}
-          >
+          <select value={bpUnit} onChange={(e) => setBpUnit(e.target.value)}>
             <option value="bp">bp</option>
             <option value="kbp">kbp</option>
             <option value="Mbp">Mbp</option>
@@ -112,11 +107,7 @@ const G2Mol = () => {
           <p className="text-xl font-semibold text-right inline mr-1">
             {molar.toFixed(3)}
           </p>
-          <select
-            className="w-16"
-            value={molUnit}
-            onChange={(e) => setMolUnit(e.target.value)}
-          >
+          <select value={molUnit} onChange={(e) => setMolUnit(e.target.value)}>
             <option value="fmol">fmol</option>
             <option value="pmol">pmol</option>
             <option value="nmol">nmol</option>

@@ -24,6 +24,21 @@ pre {
   font-family: "Lato", "Noto Sans JP", sans-serif;
 }
 
+select {
+  padding: 0.4em 0.4em;
+  width: 5rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #e6edf3;
+  color: black;
+  cursor: pointer;
+  margin-left: 0.3rem;
+}
+
+select:focus {
+  outline: 2px solid #2589d0;
+}
+
 /* Headers */
 h1 {
   @apply text-2xl font-bold mt-12 mb-8;

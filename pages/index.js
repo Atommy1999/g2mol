@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Double-stranded DNA (dsDNA) Conversion Tool (ng → pmol)</title>
+        <title>dsDNA 換算(ng → pmol)</title>
         <meta
           name="description"
           content="質量と塩基対数を入力すると、モル数が自動的に計算されます。モル数はピコモル単位で表示されます。"

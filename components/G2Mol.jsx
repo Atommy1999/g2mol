@@ -74,7 +74,7 @@ const G2Mol = () => {
             type="number"
             value={mass}
             onChange={(e) => setMass(Number(e.target.value))}
-            className="w-24 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
+            className="w-20 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
           />
           <select
             value={massUnit}
@@ -92,7 +92,7 @@ const G2Mol = () => {
             type="number"
             value={basePairCount}
             onChange={(e) => setBasePairCount(Number(e.target.value))}
-            className="w-24 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
+            className="w-20 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-300 text-right"
           />
           <select value={bpUnit} onChange={(e) => setBpUnit(e.target.value)}>
             <option value="bp">bp</option>

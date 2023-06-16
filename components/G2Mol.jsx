@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from "react";
 
 const G2Mol = () => {
-  const initialMassUnit = localStorage.getItem("massUnit") || "ng";
-  const initialBpUnit = localStorage.getItem("bpUnit") || "bp";
-  const initialMolUnit = localStorage.getItem("molUnit") || "pmol";
-
   const [mass, setMass] = useState("");
   const [basePairCount, setBasePairCount] = useState("");
   const [molar, setMolar] = useState(0);
 
-  const [massUnit, setMassUnit] = useState(initialMassUnit);
-  const [bpUnit, setBpUnit] = useState(initialBpUnit);
-  const [molUnit, setMolUnit] = useState(initialMolUnit);
+  const [massUnit, setMassUnit] = useState("ng");
+  const [bpUnit, setBpUnit] = useState("bp");
+  const [molUnit, setMolUnit] = useState("pmol");
+
+  useEffect(() => {
+    const initialMassUnit = localStorage.getItem("massUnit") || "ng";
+    const initialBpUnit = localStorage.getItem("bpUnit") || "bp";
+    const initialMolUnit = localStorage.getItem("molUnit") || "pmol";
+    setMassUnit(initialMassUnit);
+    setBpUnit(initialBpUnit);
+    setMolUnit(initialMolUnit);
+  }, []);
 
   useEffect(() => {
     if (mass !== "" && basePairCount !== "") {

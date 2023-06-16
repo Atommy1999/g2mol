@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>dsDNA 換算(g → mol)</title>
+        <title>dsDNA 質量-mol 換算</title>
         <meta
           name="description"
-          content="質量と塩基対数を入力すると、モル数が自動的に計算されます。モル数はピコモル単位で表示されます。"
+          content="本ツールでは、2本鎖DNA (dsDNA) の質量と塩基対数からモル数をリアルタイムで計算します。"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -20,7 +20,14 @@ export default function Home() {
           <p className="text-gray-500">
             Double-stranded DNA (dsDNA) Conversion Tool (g → mol)
           </p>
-
+          <p className="text-sm mb-0.5">
+            2本鎖DNA (dsDNA)
+            の質量と塩基対数からモル数をリアルタイムで計算します。
+          </p>
+          <p className="text-sm mb-8 text-gray-500">
+            Calculate the number of moles of double-stranded DNA (dsDNA) in real
+            time from its mass and base pair number.
+          </p>
           <G2Mol />
           <h2 className="mb-3">使い方</h2>
           <ol>
@@ -80,9 +87,7 @@ export default function Home() {
               the dropdown menu.
             </li>
           </ol>
-
           <h2 className="mb-3">Author information</h2>
-
           <ul>
             <li>
               Website: <a href="https://atommy.me">atommy.me</a>

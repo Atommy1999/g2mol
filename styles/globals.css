@@ -98,7 +98,7 @@ ul {
 @tailwind components;
 
 .container {
-  padding: 2rem;
+  padding: 1.2rem;
 }
 
 .main {

@@ -1,26 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap");
+
+@tailwind base;
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: dotted;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Lato", "Noto Sans JP", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* Headers */
+h1 {
+  @apply text-2xl font-bold mt-12 mb-8;
 }
+
+h2 {
+  @apply text-xl font-bold mt-12 mb-6;
+}
+h3 {
+  @apply text-base font-bold my-6;
+}
+
+/* Links */
+a {
+  @apply text-cyan-500 underline leading-7;
+}
+a:hover {
+  @apply decoration-dashed;
+}
+
+/* Paragraph */
+p {
+  @apply mb-4 leading-7 text-justify;
+}
+
+/* Table */
+table {
+  @apply block border-collapse my-10 overflow-x-scroll  whitespace-nowrap text-sm;
+}
+th {
+  @apply bg-slate-300 text-slate-800 font-bold text-center border-[1px] border-b-2 border-slate-500 py-2 px-5;
+}
+td {
+  @apply border-[1px] border-slate-500 py-2 px-5;
+}
+tr:nth-child(2n) {
+  @apply bg-slate-200;
+}
+
+/* Lists */
+ul,
+ol {
+  @apply mb-4 ml-5;
+}
+li > p,
+ul > li,
+ol > li {
+  @apply mb-2 leading-7 pl-1;
+}
+ol {
+  @apply list-decimal;
+}
+ul {
+  @apply list-disc;
+}
+
+@tailwind components;
+
+.container {
+  padding: 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@tailwind utilities;

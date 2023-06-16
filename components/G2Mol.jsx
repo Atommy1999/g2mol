@@ -1,13 +1,38 @@
 import React, { useState, useEffect } from "react";
 
 const G2Mol = () => {
+  const initialMassUnit = localStorage.getItem("massUnit") || "ng";
+  const initialBpUnit = localStorage.getItem("bpUnit") || "bp";
+  const initialMolUnit = localStorage.getItem("molUnit") || "pmol";
+
   const [mass, setMass] = useState("");
   const [basePairCount, setBasePairCount] = useState("");
   const [molar, setMolar] = useState(0);
 
-  const [massUnit, setMassUnit] = useState("ng");
-  const [bpUnit, setBpUnit] = useState("bp");
-  const [molUnit, setMolUnit] = useState("pmol");
+  const [massUnit, setMassUnit] = useState(initialMassUnit);
+  const [bpUnit, setBpUnit] = useState(initialBpUnit);
+  const [molUnit, setMolUnit] = useState(initialMolUnit);
+
+  useEffect(() => {
+    if (mass !== "" && basePairCount !== "") {
+      const moles = calculateMoles(mass, basePairCount);
+      setMolar(moles);
+    } else {
+      setMolar(0);
+    }
+  }, [mass, basePairCount, massUnit, bpUnit, molUnit]);
+
+  useEffect(() => {
+    localStorage.setItem("massUnit", massUnit);
+  }, [massUnit]);
+
+  useEffect(() => {
+    localStorage.setItem("bpUnit", bpUnit);
+  }, [bpUnit]);
+
+  useEffect(() => {
+    localStorage.setItem("molUnit", molUnit);
+  }, [molUnit]);
 
   useEffect(() => {
     if (mass !== "" && basePairCount !== "") {

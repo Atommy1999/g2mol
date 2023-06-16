@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>dsDNA 質量-mol 換算</title>
+        <title>dsDNA モル数計算ツール</title>
         <meta
           name="description"
-          content="本ツールでは、2本鎖DNA (dsDNA) の質量と塩基対数からモル数をリアルタイムで計算します。"
+          content="2本鎖DNA (dsDNA) の質量と塩基対数からモル数をリアルタイムで計算します。"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
